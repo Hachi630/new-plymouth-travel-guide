@@ -89,8 +89,9 @@
   color: var(--text-secondary);
 }
 
-.media {
-  margin: var(--sp-3) var(--sp-3) 0;
+.mediaWrap {
+  margin-top: var(--sp-3);
+  padding-inline: var(--sp-3);
 }
 
 /* --- expandable footer --- */

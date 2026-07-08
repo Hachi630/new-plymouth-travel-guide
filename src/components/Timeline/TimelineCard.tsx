@@ -60,12 +60,9 @@ export function TimelineCard({
         </div>
 
         {showMedia ? (
-          <MediaImage
-            image={image}
-            name={item.name}
-            ratio={16 / 9}
-            className={styles.media}
-          />
+          <div className={styles.mediaWrap}>
+            <MediaImage image={image} name={item.name} ratio={16 / 9} />
+          </div>
         ) : null}
 
         {hasBody ? (
