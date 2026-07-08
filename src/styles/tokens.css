@@ -1,0 +1,96 @@
+/* ============================================================
+   Design tokens — single source of truth (design doc §3)
+   Theme: Basalt Coast 玄武岩海岸
+   ============================================================ */
+:root {
+  /* --- Palette (§3.1) --- */
+  --c-mist: #e8edec; /* 迷雾白 · page bg */
+  --c-cloud: #ffffff; /* 云纸白 · card / popover */
+  --c-basalt: #16201f; /* 玄武黑 · primary text, cone */
+  --c-tasman: #0b5d66; /* 塔斯曼青 · primary accent */
+  --c-deep: #08434a; /* 深潜青 · headings, hover/pressed */
+  --c-fern: #4a7c59; /* 蕨叶绿 · secondary accent, "免费" */
+  --c-ember: #db6b3a; /* 海岸暖橙 · accent points, "收费/看山窗口" */
+  --c-mist-grey: #9fb2af; /* 苔雾灰 · secondary text, borders */
+
+  /* Tints derived from the palette (kept here so components never invent colours) */
+  --c-tasman-050: #eef4f4;
+  --c-fern-050: #eef3ef;
+  --c-ember-050: #fbeee7;
+  --c-ember-100: #f5d9c9;
+  --c-line: #dbe3e1; /* hairline borders on mist/cloud */
+
+  /* --- Semantic aliases (components prefer these) --- */
+  --bg-page: var(--c-mist);
+  --bg-card: var(--c-cloud);
+  --text-primary: var(--c-basalt);
+  --text-secondary: #45514f; /* darker than mist-grey → passes contrast for small text */
+  --text-muted: var(--c-mist-grey);
+  --accent: var(--c-tasman);
+  --accent-strong: var(--c-deep);
+  --border: var(--c-line);
+
+  /* --- Typography (§3.2 / §3.3) --- */
+  --font-cjk: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Hiragino Sans GB',
+    sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque',
+    var(--font-cjk);
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI',
+    var(--font-cjk);
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo,
+    var(--font-cjk), monospace;
+
+  /* Size ladder (mobile base; hero & day-title upscale slightly on wider screens) */
+  --fs-hero: clamp(2.5rem, 8vw, 2.75rem); /* 40 → 44 */
+  --fs-day: clamp(1.5rem, 5vw, 1.625rem); /* 24 → 26 */
+  --fs-card-title: 1.125rem; /* 18 */
+  --fs-body: 1rem; /* 16 */
+  --fs-sm: 0.9375rem; /* 15 */
+  --fs-meta: 0.8125rem; /* 13 · mono labels */
+  --fs-foot: 0.75rem; /* 12 */
+
+  --fw-hero: 700;
+  --fw-title: 600;
+  --fw-medium: 500;
+  --fw-body: 400;
+
+  --lh-hero: 1.08;
+  --lh-tight: 1.25;
+  --lh-body: 1.6;
+
+  --tracking-mono: 0.02em;
+
+  /* --- Radius (§3.4) --- */
+  --radius-card: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* --- Elevation (§3.4) --- */
+  --shadow-card: 0 2px 12px rgba(22, 32, 31, 0.06);
+  --shadow-pop: 0 8px 28px rgba(22, 32, 31, 0.14);
+
+  /* --- Layout (§3.4) --- */
+  --container: 640px;
+  --pad: 16px;
+
+  /* --- Spacing rhythm 8/12/16/24/32 (§3.4) --- */
+  --sp-1: 8px;
+  --sp-2: 12px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+
+  /* --- Motion (§7) --- */
+  --dur-fade: 150ms;
+  --dur-expand: 300ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Focus & hit area (§7) --- */
+  --focus-color: var(--c-tasman);
+  --focus-color-on-accent: #ffffff;
+  --tap: 44px;
+
+  /* --- Layering --- */
+  --z-sticky: 20;
+  --z-pop: 40;
+}

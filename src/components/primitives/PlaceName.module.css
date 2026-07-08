@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.zh {
+  font-family: var(--font-display);
+  font-weight: var(--fw-title);
+  font-size: var(--fs-card-title);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+}
+
+.en {
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-body);
+  line-height: 1.3;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}

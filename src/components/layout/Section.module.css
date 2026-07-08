@@ -1,0 +1,32 @@
+.section {
+  margin-top: var(--sp-5);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--sp-1) var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: var(--fs-day);
+  font-weight: var(--fw-title);
+  line-height: var(--lh-tight);
+  color: var(--c-deep);
+}
+
+.icon {
+  font-size: 0.9em;
+  color: var(--c-ember);
+}
+
+.sub {
+  font-size: var(--fs-meta);
+  color: var(--text-secondary);
+}

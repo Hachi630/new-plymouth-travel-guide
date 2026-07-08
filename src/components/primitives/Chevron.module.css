@@ -1,0 +1,9 @@
+.icon {
+  flex: none;
+  color: var(--c-tasman);
+  transition: transform var(--dur-expand) var(--ease);
+}
+
+.open {
+  transform: rotate(180deg);
+}

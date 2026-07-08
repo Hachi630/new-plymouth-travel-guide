@@ -1,0 +1,61 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  padding-block: var(--sp-2);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  /* opaque so scrolled content never bleeds through */
+  backdrop-filter: none;
+}
+
+.tablist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-1);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap);
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--c-deep);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background-color var(--dur-fade) var(--ease),
+    color var(--dur-fade) var(--ease),
+    border-color var(--dur-fade) var(--ease);
+}
+
+.tab:hover {
+  border-color: var(--c-mist-grey);
+}
+
+.selected {
+  background: var(--c-tasman);
+  border-color: var(--c-tasman);
+  color: #fff;
+}
+
+/* Tasman focus ring is invisible on the selected (Tasman) tab → use a light ring */
+.selected:focus-visible {
+  outline-color: var(--focus-color-on-accent);
+}
+
+.icon {
+  font-size: 15px;
+  flex: none;
+}
+
+.label {
+  min-width: 0;
+}

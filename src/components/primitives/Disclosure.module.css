@@ -1,0 +1,15 @@
+.region {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-expand) var(--ease);
+}
+
+.region.open {
+  grid-template-rows: 1fr;
+}
+
+/* required so the collapsing track can reach zero and clip content */
+.inner {
+  overflow: hidden;
+  min-height: 0;
+}

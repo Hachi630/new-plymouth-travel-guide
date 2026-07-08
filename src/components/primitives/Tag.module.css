@@ -1,0 +1,50 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font-size: var(--fs-foot);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* leading dot signals the colour meaning for filled variants */
+.free::before,
+.paid::before,
+.food::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.free {
+  background: var(--c-fern-050);
+  color: #2f5a3c; /* 免费 · Fern */
+}
+
+.paid {
+  background: var(--c-ember-050);
+  color: #a2461f; /* 收费 · Ember */
+}
+
+.food {
+  background: #efe7db;
+  color: #6f5836; /* 美食 · warm neutral */
+}
+
+.other {
+  background: transparent;
+  color: var(--text-secondary);
+  box-shadow: inset 0 0 0 1px var(--c-mist-grey); /* 其余 · grey outline */
+}
+
+.onlyIfClear {
+  background: var(--c-ember-050);
+  color: #a2461f;
+  box-shadow: inset 0 0 0 1.5px var(--c-ember); /* 晴天才去 · ember outline */
+}

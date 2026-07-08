@@ -1,0 +1,136 @@
+.list {
+  margin-top: var(--sp-3);
+}
+
+.item {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: var(--sp-3);
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+/* continuous timeline rail: each item's line runs from its top into the gap below */
+.item::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: calc(-1 * var(--sp-3));
+  width: 2px;
+  background: var(--border);
+}
+
+.item:first-child::before {
+  top: 26px;
+}
+
+.item:last-child::before {
+  bottom: calc(100% - 26px);
+}
+
+.dot {
+  position: absolute;
+  left: 3px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--c-tasman);
+  border: 2px solid var(--bg-page);
+  z-index: 1;
+}
+
+/* --- card --- */
+.card {
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-3) 0;
+}
+
+.slotRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  flex-wrap: wrap;
+}
+
+.highlight {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-secondary);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.dur {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-mono);
+  color: var(--c-tasman);
+}
+
+.media {
+  margin: var(--sp-3) var(--sp-3) 0;
+}
+
+/* --- expandable footer --- */
+.footer {
+  padding: 4px var(--sp-3) var(--sp-2);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: var(--tap);
+  padding-inline: 2px;
+  color: var(--c-tasman);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+}
+
+.toggle:hover {
+  color: var(--c-deep);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding-bottom: var(--sp-2);
+}
+
+.para {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+}
+
+.lead {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--c-tasman-050);
+  color: var(--c-deep);
+  font-size: var(--fs-foot);
+  font-weight: var(--fw-medium);
+}
+
+.map {
+  margin-top: 4px;
+  align-self: flex-start;
+}

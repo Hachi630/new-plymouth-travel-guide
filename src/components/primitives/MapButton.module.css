@@ -1,0 +1,22 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--c-tasman);
+  color: #fff;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: background-color var(--dur-fade) var(--ease);
+}
+
+.btn:hover {
+  background: var(--c-deep);
+}
+
+.pin {
+  flex: none;
+}

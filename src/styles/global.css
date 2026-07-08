@@ -1,0 +1,5 @@
+/* Global stylesheet barrel — imported once from main.tsx.
+   Order: tokens (variables) → reset → base (uses the tokens). */
+@import './tokens.css';
+@import './reset.css';
+@import './base.css';

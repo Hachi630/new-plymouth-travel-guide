@@ -1,0 +1,201 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--tap);
+  padding: var(--sp-3);
+  text-align: left;
+}
+
+.hTitle {
+  font-family: var(--font-display);
+  font-weight: var(--fw-title);
+  font-size: var(--fs-card-title);
+  color: var(--text-primary);
+}
+
+.hMeta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-foot);
+  color: var(--text-secondary);
+}
+
+.chev {
+  margin-left: auto;
+}
+
+.panelBody {
+  padding: 0 var(--sp-3) var(--sp-3);
+}
+
+/* --- checklist --- */
+.progress {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-tasman);
+  margin-bottom: var(--sp-1);
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+
+.cb {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  accent-color: var(--c-tasman);
+  cursor: pointer;
+}
+
+.checkText {
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* completed: strike-through but keep legible contrast (not mist-grey) */
+.checkDone .checkText {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+/* --- food --- */
+.foodList {
+  display: flex;
+  flex-direction: column;
+}
+
+.foodRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.foodRow:last-child {
+  border-bottom: none;
+}
+
+.foodInfo {
+  min-width: 0;
+}
+
+.foodNote {
+  font-size: var(--fs-meta);
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.foodMap {
+  flex: none;
+}
+
+/* --- budget --- */
+.tableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: var(--fs-meta);
+}
+
+.table thead th {
+  text-align: left;
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table tbody th {
+  text-align: left;
+  font-weight: var(--fw-medium);
+  color: var(--text-primary);
+  padding: 8px 10px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.table tbody td {
+  padding: 8px 10px;
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.tdNote {
+  min-width: 150px;
+}
+
+.num {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.totalRow {
+  background: var(--c-tasman-050);
+}
+
+.totalRow th,
+.totalRow td {
+  color: var(--c-deep);
+  font-weight: var(--fw-title);
+}
+
+/* --- safety --- */
+.safetyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.safetyRow {
+  position: relative;
+  padding-left: 20px;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+}
+
+.safetyRow::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-ember);
+}

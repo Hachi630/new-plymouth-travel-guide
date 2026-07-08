@@ -1,0 +1,46 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.neutral {
+  background: var(--c-tasman-050);
+  color: var(--c-deep);
+}
+
+.tasman {
+  background: var(--c-tasman);
+  color: #fff;
+}
+
+.ember {
+  background: var(--c-ember-050);
+  color: #a2461f;
+}
+
+.fern {
+  background: var(--c-fern-050);
+  color: #2f5a3c;
+}
+
+a.pill {
+  text-decoration: none;
+  transition: filter var(--dur-fade) var(--ease);
+}
+
+a.pill:hover {
+  filter: brightness(0.96);
+}
