@@ -82,6 +82,13 @@
   color: var(--c-tasman);
 }
 
+.access {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-mono);
+  color: var(--text-secondary);
+}
+
 .media {
   margin: var(--sp-3) var(--sp-3) 0;
 }

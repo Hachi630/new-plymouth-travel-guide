@@ -56,6 +56,7 @@ export function TimelineCard({
             <CostTag item={item} />
             {item.category ? <Tag variant="other">{item.category}</Tag> : null}
           </div>
+          {item.access ? <p className={styles.access}>{item.access}</p> : null}
         </div>
 
         {showMedia ? (

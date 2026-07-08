@@ -109,6 +109,14 @@
   margin-top: 2px;
 }
 
+.foodAccess {
+  font-family: var(--font-mono);
+  font-size: var(--fs-foot);
+  letter-spacing: var(--tracking-mono);
+  color: var(--c-tasman);
+  margin-top: 3px;
+}
+
 .foodMap {
   flex: none;
 }

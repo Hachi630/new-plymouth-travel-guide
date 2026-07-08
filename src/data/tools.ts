@@ -24,41 +24,49 @@ export const packing = [
 ] satisfies ChecklistItem[]
 
 /* --- 必吃美食(§11) --- */
+// 按行程分布(距住处 20 Woolcombe Terrace 的步行 / 开车时间)
 export const food = [
   {
     id: 'food-fatpigeon',
     name: { zh: 'Fat Pigeon', en: 'Piopio' },
-    note: '途中(Piopio)画廊咖啡馆,午餐好去处',
+    note: 'Day1 午餐 · 途中画廊咖啡馆',
+    access: '🚗 途中停靠 · Piopio(不在市区)',
     map: q('Fat Pigeon Cafe Piopio'),
   },
   {
     id: 'food-shiningpeak',
-    name: { zh: 'Shining Peak Brewing', en: 'New Plymouth' },
-    note: '市区当地精酿 + 餐食',
+    name: { zh: 'Shining Peak Brewing', en: '59 Gill Street' },
+    note: 'Day1 晚餐 · 当地精酿 + 餐食',
+    access: '🚶 ~7 min · 🚗 ~2 min',
     map: q('Shining Peak Brewing New Plymouth'),
   },
   {
-    id: 'food-mrwhite',
-    name: { zh: 'Mr. White', en: 'New Plymouth' },
-    note: '市区本地人气餐馆',
-    map: q('Mr White New Plymouth'),
+    id: 'food-mswhite',
+    name: { zh: 'Ms White', en: '47 Queen Street' },
+    note: 'Day2 午餐 · 披萨 + 啤酒花园(近 Len Lye)',
+    access: '🚶 ~16 min · 🚗 ~3 min',
+    map: q('Ms White New Plymouth'),
   },
   {
     id: 'food-treehouse',
-    name: { zh: 'Treehouse', en: 'New Plymouth' },
-    note: '市区躲雨吃好',
-    map: q('Treehouse New Plymouth'),
+    name: { zh: 'Treehouse Bar & Bistro', en: 'Devon Street West' },
+    note: 'Day2 晚餐 · 城西小酒馆',
+    access: '🚶 ~48 min · 🚗 ~6 min(约 3km)',
+    map: q('Treehouse Bar and Bistro New Plymouth'),
   },
   {
     id: 'food-ricebar',
-    name: { zh: 'Rice Bar & Food', en: 'New Plymouth' },
-    note: '市区亚洲风味饭食,换口味 / 想吃热乎饭时的选择',
+    name: { zh: 'Rice Bar & Food', en: '54 Gill Street' },
+    note: 'Day3 下山午餐 · 泰式风味',
+    access: '🚶 ~7 min · 🚗 ~2 min',
     map: q('Rice Bar & Food New Plymouth'),
   },
   {
     id: 'food-fishchips',
-    name: { zh: '经典海滩 Fish & Chips', en: 'Beach fish & chips' },
-    note: '海边经典,收尾必点',
+    name: { zh: '海滩 Fish & Chips', en: 'East End Beach' },
+    note: 'Day3 海边收尾 · 经典炸鱼薯条',
+    access: '🚶 ~17 min · 🚗 ~5 min',
+    map: q('East End Beach New Plymouth'),
   },
 ] satisfies FoodItem[]
 

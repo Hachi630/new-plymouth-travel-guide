@@ -38,6 +38,8 @@ export interface TimelineItem {
   name: BilingualName
   /** one-line hook. */
   highlight: string
+  /** walk / drive from the accommodation, e.g. "🚶 ~7 min · 🚗 ~2 min". */
+  access?: string
   /** human string, e.g. "来回约 5h"; not computed. */
   duration?: string
   cost: CostType
@@ -151,6 +153,8 @@ export interface FoodItem {
   id: string
   name: BilingualName
   note: string
+  /** which day + walk/drive from the accommodation. */
+  access?: string
   map?: MapQuery
 }
 
