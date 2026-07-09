@@ -8,8 +8,9 @@ export const days = [
     tabLabel: 'Day1 路上·日落',
     date: '周五 7/10',
     theme:
-      '一路向南,约 5.5 小时车程,途中吃喝;抵达后若天晴,冲一场近城的山景日落。',
-    driveNote: '不走大山路,天黑得早——日落看天决定,云厚就直接吃饭,周日再补。',
+      '一路向南,约 5–5.5h 车程,途中吃喝。不用赶早出发,午餐路上随到随吃、下午从容抵达即可。',
+    driveNote:
+      '周五是赶路 + 安顿日(日落已挪到周六),不必卡饭点。只是冬季 ~17:15 就天黑,尽量上午上路,别把大段路留到夜里开。',
     driveLeg: {
       id: 'd1-leg',
       start: { zh: '奥克兰', en: 'Auckland' },
@@ -27,23 +28,23 @@ export const days = [
     items: [
       {
         id: 'd1-depart',
-        timeSlot: '出发 · 07:00 前',
+        timeSlot: '上午出发',
         name: { zh: '奥克兰出发', en: 'Depart Auckland' },
-        highlight: '越早越从容',
+        highlight: '不用赶早,~8:30–9:30 出发即可,下午从容到',
         cost: 'other',
         category: '驾驶',
-        tips: '先加满油、备离线地图;SH3 沿途小镇少,别拖到没油。',
+        tips: '按 ~5.5h 算:9 点走 → 路上午餐 → ~14:30–15:00 到新普;10 点走 ~16:00 到。冬季 ~17:15 天黑,尽量别晚过上午中段上路。先加满油、备离线地图(SH3 小镇少)。',
       },
       {
         id: 'd1-fatpigeon',
-        timeSlot: '午餐',
+        timeSlot: '途中午餐',
         name: { zh: 'Fat Pigeon', en: 'Fat Pigeon Gallery Café, Piopio' },
-        highlight: '行程中点的画廊咖啡馆,吃好再上路',
+        highlight: '行程中点的画廊咖啡馆,到了就吃、不必卡饭点',
         access: '🚗 途中停靠 · Piopio(不在市区)',
         duration: '45–60min',
         cost: 'food',
         why: '奥克兰约 3h 到此,正好是全程中点,歇脚补给;画廊咖啡馆环境舒服。',
-        tips: '此后到新普约 2h。',
+        tips: '当午餐正好;晚点出发就当晚午餐 / 下午茶,不用赶饭点。此后到新普约 2h。',
         map: q('Fat Pigeon Cafe Piopio'),
       },
       {
